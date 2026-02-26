@@ -29,7 +29,7 @@ hello-world = "hello_world:main"
 
 [[tool.uv.index]]
 # TODO: Change this to the actual path where the wheel files are currently located
-url = "file://path_to/kivy-app-hello-world/wheels/simple"
+url = "file:///Volumes/CodeSSD/psproject_showcases/kivy-app-hello-world/wheels/simple"
 
 [tool.uv.sources]
 ps-launcher = { workspace = true }

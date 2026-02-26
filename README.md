@@ -14,9 +14,14 @@ build custom wheels for local wheels/simple
 ./build-wheels.sh
 ```
 
+update pyproject.toml to use current location of wheels folder
+```
+sed -i '' 's|url = "file://.*wheels/simple"|url = "file://'"$PWD"'/wheels/simple"|' pyproject.toml
+```
+
 update simple index
 ```
-uv update simple
+uv run psproject update simple
 ```
 
 update xcode project site-packages
@@ -26,8 +31,19 @@ uv run psproject update site-packages
 
 run on desktop (normal uv desktop mode)
 ```
-uv run HelloWorld
+uv run hello-world
 ```
+
+same commands when venv is activated
+
+```
+source .venv/bin/activate
+
+psproject update simple
+psproject update site-packages
+hello-world
+```
+
 
 open xcode project and set developer id
 
